@@ -23,6 +23,7 @@ import Pokedex from './components/Pokedex';
 import './theme/variables.css';
 import { MenuPokedexProvider } from './contexts/MenuPokedexProvider';
 import { PokedexMenu } from './components/Menu/PokedexMenu';
+import { PokemonList } from './components/Menu/PokemonList'; 
 
 setupIonicReact();
 
@@ -36,7 +37,7 @@ const App: React.FC = () => (
               <PokedexMenu />
             </Route>
             <Route exact path="/pokedex">
-              <>Esta es la Pokedex</>
+              <PokemonList />
             </Route>
             <Route exact path="/pack">
               <>Esta es la bolsa de objetos</>
