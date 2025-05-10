@@ -19,6 +19,14 @@ const Pokedex: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       const path = EPokedexMenuOption[menuOption].toLowerCase();
       setScreen(menuOption as unknown as EPokedexScreen)
       router.push(`/${path}`);
+    } else if (screen === EPokedexScreen.POKEDEX) {
+      const selectedPokemon = (window as any).currentPokemonList?.[
+        (window as any).currentSelectedIndex
+      ];
+      if (selectedPokemon) {
+        setScreen(EPokedexScreen.DETAIL);
+        router.push(`/pokemon/${selectedPokemon.name}`);
+      }
     }
   }
 

@@ -30,6 +30,8 @@ export const Cross = () => {
         onClick={() => {
           if (screen === EPokedexScreen.POKEDEX) {
             (window as any).pokedexListNavigation?.prevBlock();
+          } else if (screen === EPokedexScreen.DETAIL) {
+            (window as any).pokedexDetailNavigation?.prevInfo();
           }
         }}
       >
@@ -44,6 +46,8 @@ export const Cross = () => {
         onClick={() => {
           if (screen === EPokedexScreen.POKEDEX) {
             (window as any).pokedexListNavigation?.nextBlock();
+          } else if (screen === EPokedexScreen.DETAIL) {
+            (window as any).pokedexDetailNavigation?.nextInfo();
           }
         }}
       >

@@ -45,6 +45,11 @@ export const PokemonList: React.FC = () => {
     };
   }, [selectedIndex, offset, pokemons, isLoading]);
 
+  useEffect(() => {
+    (window as any).currentPokemonList = pokemons;
+    (window as any).currentSelectedIndex = selectedIndex;
+  }, [pokemons, selectedIndex]);
+
   const handleMoveUp = () => {
     if (isLoading) return; // bloquear mientras carga
     if (selectedIndex > 0) {
