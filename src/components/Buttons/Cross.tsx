@@ -10,6 +10,8 @@ export const Cross = () => {
       setMenuOption(newOption);
     } else if (screen === EPokedexScreen.POKEDEX) {
       (window as any).pokedexListNavigation?.prevPage();
+    } else if (screen === EPokedexScreen.PACK) {
+      (window as any).itemListNavigation?.prevPage();
     }
   };
 
@@ -19,6 +21,8 @@ export const Cross = () => {
       setMenuOption(newOption);
     } else if (screen === EPokedexScreen.POKEDEX) {
       (window as any).pokedexListNavigation?.nextPage();
+    } else if (screen === EPokedexScreen.PACK) {
+      (window as any).itemListNavigation?.nextPage();
     }
   };
 
@@ -32,6 +36,10 @@ export const Cross = () => {
             (window as any).pokedexListNavigation?.prevBlock();
           } else if (screen === EPokedexScreen.DETAIL) {
             (window as any).pokedexDetailNavigation?.prevInfo();
+          } else if (screen === EPokedexScreen.PACK) {
+            (window as any).itemListNavigation?.prevBlock();
+          } else if (screen === EPokedexScreen.ITEM_DETAIL) {
+            (window as any).itemDetailNavigation?.prevInfo();
           }
         }}
       >
@@ -48,6 +56,10 @@ export const Cross = () => {
             (window as any).pokedexListNavigation?.nextBlock();
           } else if (screen === EPokedexScreen.DETAIL) {
             (window as any).pokedexDetailNavigation?.nextInfo();
+          } else if (screen === EPokedexScreen.PACK) {
+            (window as any).itemListNavigation?.nextBlock();
+          } else if (screen === EPokedexScreen.ITEM_DETAIL) {
+            (window as any).itemDetailNavigation?.nextInfo();
           }
         }}
       >

@@ -27,6 +27,14 @@ const Pokedex: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         setScreen(EPokedexScreen.DETAIL);
         router.push(`/pokemon/${selectedPokemon.name}`);
       }
+    } else if (screen === EPokedexScreen.PACK) {
+      const selectedItem = (window as any).currentItemList?.[
+        (window as any).currentItemSelectedIndex
+      ];
+      if (selectedItem) {
+        setScreen(EPokedexScreen.ITEM_DETAIL);
+        router.push(`/item/${selectedItem.name}`);
+      }
     }
   }
 

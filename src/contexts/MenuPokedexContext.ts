@@ -7,11 +7,12 @@ export enum EPokedexMenuOption {
 }
 
 export enum EPokedexScreen {
-  MENU,
+  MENU = 0,
   POKEDEX = 1,
   PACK = 2,
   EXIT = 3,
-  DETAIL
+  DETAIL = 4,
+  ITEM_DETAIL = 5
 }
 
 export type TMenuPokedexContext = {
