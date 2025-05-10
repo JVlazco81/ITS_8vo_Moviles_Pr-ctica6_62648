@@ -11,8 +11,8 @@ export const PokedexMenu = () => {
   }
 
   return (
-    <div className="font-pokemon text-xs !m-2 !p-2  border-3 border-double border-black rounded-md h-[calc(100%-1rem)]">
-      <ul>
+    <div className="font-pokemon text-1xl !m-2 !p-2  border-3 border-double border-black rounded-md h-[calc(100%-1rem)]">
+      <ul className="flex flex-col justify-between h-full">
         <li>
           <div className="flex flex-row justify-end">
             <FontAwesomeIcon
